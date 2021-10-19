@@ -8,6 +8,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
 }
 
 a {
@@ -19,8 +20,64 @@ p {
 }
 
 /* Utility Classes */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .text-primary {
   color: #20b2aa;
+}
+
+.l-leading {
+  font-size: 4rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.m-leading {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.py-1 {
+  padding: 1.5rem;
+}
+.py-2 {
+  padding: 2rem;
+}
+.py-3 {
+  padding: 3rem;
+}
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  background: #20b2aa;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  filter: brightness(90%);
+}
+
+.btn-dark {
+  background: #333;
+  color: #fff;
 }
 
 /* Navbar */
@@ -51,4 +108,55 @@ p {
 #navbar ul li a:hover {
   background: #20b2aa;
   border-radius: 5px;
+}
+
+/* Showcase */
+#showcase {
+  background: #333
+    url('https://images.unsplash.com/photo-1446797376004-9352dfc9f789?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2083&q=80')
+    no-repeat center center/cover;
+  height: 100vh;
+  color: #fff;
+}
+
+#showcase .showcase-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  /* Overlay */
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#what {
+  height: 100vh;
+}
+
+/* Section: What We Do */
+
+#what .items {
+  display: flex;
+  padding: 1rem;
+}
+
+#what .items .item {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+#what .items .item i {
+  background: #20b2aa;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
 }
