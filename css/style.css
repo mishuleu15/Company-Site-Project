@@ -2,7 +2,9 @@
 
 :root {
   --primary-color: #cd5c5c;
+  --primary-color-2: #000000;
   --secondary-color: #fff;
+  --secondary-color-2: #333;
 }
 * {
   box-sizing: border-box;
@@ -91,8 +93,8 @@ p {
   justify-content: space-between;
   position: sticky;
   top: 0;
-  background: #333;
-  color: var(--secondary-color);
+  background: var(--secondary-color-2);
+  color: #fff;
   z-index: 1;
   padding: 1rem;
 }
@@ -106,12 +108,89 @@ p {
 #navbar ul li a {
   padding: 0.75rem;
   margin: 0 0.25rem;
-  color: var(--secondary-color);
+  color: #fff;
 }
 
 #navbar ul li a:hover {
   background: var(--primary-color);
   border-radius: 5px;
+}
+
+/* Toggle Switch */
+
+label {
+  display: flex;
+  width: 75px;
+  height: 35px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6px;
+  background: #222;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+}
+
+label .ball {
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  top: 5px;
+  left: 5px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.8s;
+}
+
+label {
+  transition: 0.3s;
+}
+input:checked + label {
+  background: #c0c0c0;
+}
+input:checked + label .ball {
+  background: #222;
+}
+input {
+  display: none;
+}
+
+label .fa-sun {
+  opacity: 1;
+}
+input:checked + label .fa-sun {
+  opacity: 0;
+}
+label .fa-moon {
+  opacity: 0;
+}
+input:checked + label .fa-moon {
+  opacity: 1;
+}
+
+label i {
+  font-size: 18px;
+}
+label .fa-sun {
+  color: gold;
+  transition: 0.8s;
+}
+label .fa-moon {
+  color: #fff;
+  transition: 0.8s;
+}
+
+input:checked + label .ball {
+  transform: translateX(40px);
+}
+
+/* Dark Mode */
+.dark-mode {
+  --primary-color: #3e4c59;
+  --primary-color-2: #fff;
+  --secondary-color: #8a2be2;
+  --secondary-color-2: #8a2be2;
 }
 
 /* Showcase */
@@ -141,8 +220,17 @@ p {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+#showcase .showcase-content a {
+  color: var(--primary-color-2);
+}
+
+#showcase .showcase-content p {
+  color: #fff;
+}
+
 #what {
   height: 100vh;
+  background: var(--secondary-color);
 }
 
 /* Section: What We Do */
@@ -163,4 +251,10 @@ p {
   padding: 1rem;
   border-radius: 50%;
   margin-bottom: 1rem;
+  color: var(--primary-color-2);
+}
+
+#what .items .item h3,
+p {
+  color: var(--primary-color-2);
 }
