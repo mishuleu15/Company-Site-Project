@@ -52,6 +52,11 @@ p {
   color: #fff;
 }
 
+.bg-primary {
+  background: var(--secondary-color-2);
+  color: #fff;
+}
+
 .l-leading {
   font-size: 4rem;
   margin-bottom: 0.75rem;
@@ -149,7 +154,7 @@ p {
 
 /* Toggle Switch */
 
-label {
+.switch label {
   display: flex;
   width: 75px;
   height: 35px;
@@ -162,7 +167,7 @@ label {
   position: relative;
 }
 
-label .ball {
+.switch label .ball {
   position: absolute;
   display: block;
   width: 25px;
@@ -174,45 +179,45 @@ label .ball {
   transition: 0.8s;
 }
 
-label {
+.switch label {
   transition: 0.3s;
 }
-input:checked + label {
+.switch input:checked + label {
   background: #c0c0c0;
 }
-input:checked + label .ball {
+.switch input:checked + label .ball {
   background: #222;
 }
-input {
+.switch input {
   display: none;
 }
 
-label .fa-sun {
+.switch label .fa-sun {
   opacity: 1;
 }
-input:checked + label .fa-sun {
+.switch input:checked + label .fa-sun {
   opacity: 0;
 }
-label .fa-moon {
+.switch label .fa-moon {
   opacity: 0;
 }
-input:checked + label .fa-moon {
+.switch input:checked + label .fa-moon {
   opacity: 1;
 }
 
-label i {
+.switch label i {
   font-size: 18px;
 }
-label .fa-sun {
+.switch label .fa-sun {
   color: gold;
   transition: 0.8s;
 }
-label .fa-moon {
+.switch label .fa-moon {
   color: #9370db;
   transition: 0.8s;
 }
 
-input:checked + label .ball {
+.switch input:checked + label .ball {
   transform: translateX(40px);
 }
 
@@ -322,4 +327,31 @@ p {
   display: block;
   width: 60%;
   margin: auto;
+}
+
+/* Section: Contact */
+#contact {
+  display: flex;
+}
+
+#contact div {
+  flex: 1;
+}
+
+#contact .contact-form .form-group {
+  margin: 0.75rem;
+}
+
+#contact .contact-form label {
+  display: block;
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.map {
+  background: url('../img/Capture.PNG') no-repeat center center/cover;
 }
