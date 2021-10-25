@@ -47,6 +47,11 @@ p {
   color: #333;
 }
 
+.bg-light-2 {
+  background: var(--secondary-color);
+  color: #333;
+}
+
 .bg-dark {
   background: #333;
   color: #fff;
